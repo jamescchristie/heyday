@@ -2,7 +2,44 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Employee {
+  """Employee id"""
+  id: Int!
+
+  """Employee name"""
+  name: String!
+
+  """Benefit budget"""
+  budget: Float!
+
+  """Employee company id"""
+  companyId: Int!
+}
+
+type EmployeeSalary {
+  """Employee id"""
+  id: Int!
+
+  """Employee name"""
+  name: String!
+
+  """Benefit budget"""
+  budget: Float!
+
+  """Employee company id"""
+  companyId: Int!
+
+  """Net salary"""
+  netSalary: Int!
+
+  """Taxes levvied"""
+  taxes: Float!
+}
+
 type Query {
   """App info."""
   appInfo: String!
+  employees(month: Float, budget: Float = 10, companyId: Float!): [Employee!]!
+  employeesSalary(month: Float, companyId: Float!): [EmployeeSalary!]!
+  employee(id: Int!): Employee!
 }
