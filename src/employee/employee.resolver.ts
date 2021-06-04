@@ -9,7 +9,7 @@ export class EmployeeResolver {
 
   @Query(() => [Employee], { name: 'employees' })
   getEmployees(
-    @Args('companyId') companyId: number,
+    @Args('companyId', { nullable: true }) companyId?: number,
     @Args('budget', { defaultValue: 10 }) budget?: number,
     @Args('month', { nullable: true }) month?: number,
   ) {

@@ -39,7 +39,7 @@ type EmployeeSalary {
 type Query {
   """App info."""
   appInfo: String!
-  employees(month: Float, budget: Float = 10, companyId: Float!): [Employee!]!
+  employees(month: Float, budget: Float = 10, companyId: Float): [Employee!]!
   employeesSalary(month: Float, companyId: Float!): [EmployeeSalary!]!
   employee(id: Int!): Employee!
 }

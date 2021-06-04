@@ -57,7 +57,18 @@ The GraphQL playground is available at http://localhost:3000/graphql
 #### AppInfo
 
 ```graphql
-query AppInfo {
-  appInfo
+# All employees
+employees () {
+  name, id, budget, companyId
 }
+
+# All employees in company one for February
+employees (companyId: 1, month: 2) {
+  name, id, budget, companyId
+}
+
+# All employees with salary / tax details in company one for February
+employeesSalary (companyId: 1, month: 2) {
+    name, id, budget, companyId, taxes, netSalary
+  }
 ```
