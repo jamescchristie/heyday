@@ -1,8 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import MOCK_EMPLOYEES from '@data/employees';
 import { EmployeeSalary } from './entities/employeeSalary.entity';
-import MOCK_ORDERS from '@data/orders';
-import MOCK_VOUCHERS from '@data/vouchers';
 import { DataWrapper } from '@src/data/dataWrapper';
 import { Employee } from './entities/employee.entity';
 
